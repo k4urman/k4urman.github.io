@@ -2,10 +2,154 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Coder Portfolio</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ff00ff;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px #00ffff;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #00ffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+        nav a:hover {
+            color: #ff00ff;
+        }
+        section {
+            margin: 40px 0;
+        }
+        h2 {
+            color: #ff00ff;
+            font-size: 1.8em;
+            border-bottom: 1px solid #00ffff;
+            padding-bottom: 10px;
+        }
+        .portfolio-item, .experience-item, .blog-post {
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #00ffff;
+        }
+        .portfolio-item h3, .experience-item h3, .blog-post h3 {
+            margin: 0 0 10px;
+            color: #00ffff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #ff00ff;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <p>Coder & Developer</p>
+        </header>
+
+        <nav>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#experience">Experience</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-item">
+                <h3>Project 1: Web App</h3>
+                <p>A web application built with React and Node.js, featuring user authentication and real-time data updates.</p>
+                <p><a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a> | <a href="https://project1.demo" target="_blank">Live Demo</a></p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Project 2: Python Automation Script</h3>
+                <p>A Python script to automate data scraping and processing, integrated with pandas and BeautifulSoup.</p>
+                <p><a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a></p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Software Developer at Tech Corp</h3>
+                <p><em>Jan 2022 - Present</em></p>
+                <p>Developed and maintained full-stack applications using JavaScript, Python, and SQL. Led a team of 3 developers in agile sprints.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Junior Developer at Startup XYZ</h3>
+                <p><em>Jun 2020 - Dec 2021</em></p>
+                <p>Built responsive front-end interfaces with HTML, CSS, and React. Contributed to API development with Flask.</p>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="blog-post">
+                <h3>Why I Love Coding in Python</h3>
+                <p><em>Posted on May 15, 2025</em></p>
+                <p>Python’s simplicity and versatility make it my go-to language for everything from web dev to data science. Here’s why...</p>
+                <p><a href="blog/python-post.html">Read More</a></p>
+            </div>
+            <div class="blog-post">
+                <h3>Building a CI/CD Pipeline</h3>
+                <p><em>Posted on April 10, 2025</em></p>
+                <p>A step-by-step guide to setting up a CI/CD pipeline with GitHub Actions for seamless deployments.</p>
+                <p><a href="blog/cicd-post.html">Read More</a></p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">yourusername</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('href').substring(1);
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
